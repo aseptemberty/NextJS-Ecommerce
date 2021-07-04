@@ -1,0 +1,24 @@
+@import "../../styleGuide.module";
+
+.item{
+  padding: 4px;
+  display: flex;
+  flex-direction: column!important;
+  width: 264px!important;
+
+  .card{
+    border-radius: 10px;
+    background-color: $second-light-grey;
+    height: 174px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    @extend %text-16px-regular;
+    margin-bottom: 13px;
+  }
+
+  .date{
+    @extend %text-12px-regular;
+  }
+}

@@ -1,0 +1,166 @@
+@import "../styleGuide.module";
+
+@mixin borderTop($color){
+  border-top: 2px $color solid;
+}
+
+.header {
+  background: $main-black;
+  height: 3rem;
+  font-size: $text-medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4rem;
+  color: $main-white;
+
+
+  .partnersMenu {
+    text-transform: uppercase;
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    align-items: center;
+
+    .tab {
+      width: 6.5rem;
+      text-align: center;
+      opacity: 0.5;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.4rem;
+      &:first-child {
+        @include borderTop($main-blue);
+        &:hover .tabRhumb{
+          background-color: $main-blue;
+        }
+      }
+
+      &:nth-child(2) {
+        @include borderTop($main-red);
+        &:hover .tabRhumb{
+          background-color: $main-red;
+        }
+      }
+
+      &:nth-child(3) {
+        @include borderTop($second-orange);
+        &:hover .tabRhumb{
+          background-color: $second-orange;
+        }
+      }
+
+      &:nth-child(4) {
+        @include borderTop($second-yellow);
+        &:hover .tabRhumb{
+          background-color: $second-yellow;
+        }
+      }
+
+      &:nth-child(5) {
+        @include borderTop($main-green);
+
+        &:hover .tabRhumb {
+          background-color: $main-green;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .tabRhumb {
+        height: 5px;
+        width: 5px;
+        transform: rotate(45deg);
+        position: relative;
+        left: 35%;
+        top: -23px;
+      }
+
+      &:hover {
+        opacity: 1;
+
+      }
+      @media (max-width: 425px) {
+        padding: 0;
+
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 996px) {
+      margin: auto;
+    }
+  }
+
+  .cityInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0.4rem;
+    @extend %text-12px-medium;
+
+    :first-child{
+      display: flex;
+      flex-direction: row;
+
+      p{
+        padding-left: 10px;
+      }
+    }
+
+    .tab {
+      padding: 0 0.4rem;
+    }
+
+    .menuBurger{
+      color: $main-white;
+      display: none;
+    }
+
+    @media (max-width: 1200px) {
+      .tab:nth-child(1){
+        padding-top: 14px;
+      }
+      .tab:nth-child(2){
+        padding-top: 14px;
+      }
+      .tab:nth-child(3){
+        padding-top: 14px;
+      }
+      .tab:nth-child(4){
+        display: none;
+      }
+      .tab:nth-child(5){
+        display: none;
+      }
+      .tab:nth-child(6){
+        display: none;
+      }
+      .menuBurger{
+        display: flex;
+        padding: 10px;
+      }
+
+    }
+
+
+  }
+  @media only screen and (max-width: 860px) {
+    .cityInfo{
+      display:none;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+
+    .partnersMenu{
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

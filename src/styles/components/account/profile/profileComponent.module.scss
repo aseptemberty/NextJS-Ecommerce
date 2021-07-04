@@ -1,0 +1,213 @@
+@import "../../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+  margin-bottom: 30px;
+
+  .card{
+    box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.08);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 30px;
+    width: 370px;
+
+    .item{
+      &:first-child{
+        border-bottom: 1px solid $light-grey;
+        margin-bottom: 24px;
+      }
+
+      .title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        h4{
+          @extend %h4-20px-medium;
+        }
+
+        button{
+          border: none;
+          color: $second-middle-grey;
+        }
+      }
+
+      .info{
+
+        .row{
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 12px;
+
+          p{
+            @extend %text-14px-regular;
+          }
+
+          .grey{
+            color: $second-middle-grey;
+            margin-right: 12px;
+          }
+        }
+      }
+
+      .subtitle{
+        @extend %text-16px-medium;
+        margin-top: 12px;
+        margin-bottom: 20px;
+      }
+
+      .rowCheckbox{
+        position: relative;
+        width: 100%;
+        height: 44px;
+        padding-bottom: 20px;
+        align-items: center;
+
+        .checkbox{
+          padding-right: 12px;
+        }
+
+        p{
+          @extend %text-14px-regular;
+          padding-left: 36px;
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+
+  .bonus{
+    background-color: $light-blue;
+    border-radius: 8px;
+    padding: 32px;
+
+    h4{
+      @extend %h4-20px-medium;
+      margin-bottom: 8px;
+    }
+
+    h1{
+      @extend %h1-32px-medium;
+      color: $main-blue;
+      margin-bottom: 32px;
+    }
+
+    .row{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+
+      .regular{
+        @extend %text-14px-regular;
+        margin-right: 20px;
+      }
+
+      .bold{
+        @extend %text-14px-medium;
+      }
+    }
+  }
+
+  .input{
+    position: relative;
+
+    input{
+      height: 52px;
+      width: 100%;
+      background-color: $light-blue;
+      border-radius: 4px;
+      border: 1px solid rgba(198, 200, 205, 0.1);
+      @extend %text-14px-regular;
+      padding: 24px 12px 8px;
+      margin-bottom: 20px;
+
+      &:focus{
+        outline: none;
+        background-color: rgba(243, 246, 250, 0.1);
+        border: 1px solid rgba(198, 200, 205, 0.4);
+      }
+    }
+
+    label{
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      @extend %text-10px-regular;
+      color: $second-middle-grey;
+    }
+  }
+
+
+  .password{
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    @extend %text-16px-medium;
+    color: $main-blue;
+    background-color: $light-blue;
+    border-radius: 4px;
+    margin-top: 24px;
+  }
+
+  .saveChange{
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    @extend %text-16px-medium;
+    color: $main-white;
+    background-color: $main-blue;
+    border-radius: 4px;
+    margin-top: 12px;
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  @media(max-width: $tablet){
+    flex-direction: row;
+
+    .card{
+      margin-right: 40px;
+    }
+
+    .bonus{
+      height: fit-content;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    margin-right: 0;
+
+    .card{
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .bonus{
+
+      h4{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      h1{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      .row{
+        justify-content: space-between;
+      }
+    }
+  }
+}

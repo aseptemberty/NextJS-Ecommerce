@@ -1,0 +1,46 @@
+@import "../../../styleGuide.module";
+
+.modal{
+  background: white;
+  width: 50%;
+  padding:40px;
+  height: 50%;
+  position: fixed;
+  z-index: 1021;
+  right:25%;
+  top: 25%;
+  border:1px solid rgba(13, 77, 163, 0.1);
+  box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.12);
+  border-radius:4px;
+
+  .header{
+  position: relative;
+
+  .title{
+    @extend %h3-24px-medium;
+    padding-bottom: 28px;
+  }
+
+  .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $second-middle-grey;
+  }
+}
+
+  .body{
+
+    ul{
+      box-shadow: none!important;
+
+      li{
+        @extend %text-16px-regular;
+
+        &:hover{
+          color: $main-blue;
+        }
+      }
+    }
+  }
+}

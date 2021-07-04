@@ -1,0 +1,80 @@
+@import "../../../../styleGuide.module";
+
+.card {
+  position: fixed;
+  box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.12);
+  border-radius: 8px;
+  padding: 60px 52px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1202;
+  background-color: $main-white;
+
+  .close {
+    position: absolute;
+    color: $second-middle-grey;
+    background-color: white;
+    border: none;
+    top: 18px;
+    right: 18px;
+    padding: 0;
+  }
+
+  h3 {
+    @extend %h3-24px-medium;
+    padding-bottom: 20px;
+  }
+
+  form{
+    .input{
+      position: relative;
+      width: 100%;
+      margin-bottom: 24px;
+
+      input{
+        height: 52px;
+        border-radius: 4px;
+        border: 1px solid rgba(198, 200, 205, 0.1);
+        background-color: $light-blue;
+
+        &:focus{
+          background-color: $main-white;
+        }
+      }
+
+      label{
+        position: absolute;
+        top:16px;
+        left: 12px;
+        color: $second-middle-grey;
+        @extend %text-14px-regular;
+      }
+    }
+
+    .quantity{
+      position: relative;
+      width: 200px;
+      margin-bottom: 24px;
+
+      input{
+        height: 52px;
+        border-radius: 4px;
+        border: 1px solid rgba(198, 200, 205, 0.1);
+        background-color: $light-blue;
+
+        &:focus{
+          background-color: $main-white;
+        }
+      }
+
+      label{
+        position: absolute;
+        top:16px;
+        left: 12px;
+        color: $second-middle-grey;
+        @extend %text-14px-regular;
+      }
+    }
+  }
+}

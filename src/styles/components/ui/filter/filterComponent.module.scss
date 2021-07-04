@@ -1,0 +1,52 @@
+@import "../../../styleGuide.module";
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  width: 264px;
+
+  .title{
+    display: flex;
+    flex-direction: row;
+
+    button{
+      display: flex;
+      flex-direction: row;
+
+      span{
+        padding-right: 10px;
+      }
+
+      p{
+        @extend %text-16px-medium;
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  .clearButton{
+    background-color: $light-blue;
+    margin-bottom: 28px;
+    color: $main-blue;
+    border-radius: 4px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    span{
+      padding-right: 16px;
+    }
+
+    p{
+      @extend %text-16px-medium;
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+}

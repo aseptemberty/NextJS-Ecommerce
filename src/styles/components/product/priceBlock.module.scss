@@ -1,0 +1,72 @@
+@import "../../styleGuide.module";
+
+.priceBlock{
+  padding: 32px;
+  position: relative;
+  margin: 10px;
+  border-radius: 8px;
+  background-image: radial-gradient(circle at 100% calc(54% - 8px), transparent 11px, #fff 17px);
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.1));
+
+  button:focus{
+    outline: none;
+  }
+
+  .sale{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 8px 2px;
+
+    position: absolute;
+    width: 52px;
+    height: 30px;
+    right: 32px;
+    top: 32px;
+
+    background: $second-yellow;
+    border-radius: 3px;
+
+    @extend %text-14px-medium;
+
+  }
+
+  .oldPrice {
+    color: $second-middle-grey;
+    font-size: $text-big;
+    display: inline-block;
+
+    p{
+      text-decoration: line-through;
+    }
+  }
+
+  .newPrice {
+    @extend %h2-28px-medium;
+    padding-bottom: 20px;
+  }
+
+  .creditLink{
+    color: $main-blue;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+
+    span {
+      padding-top: 2px;
+    }
+
+    p{
+      margin-left: 10px;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+  }
+
+  @media (max-width: 767px){
+    background-image: none;
+    filter: none;
+    box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.08);
+  }
+}
+

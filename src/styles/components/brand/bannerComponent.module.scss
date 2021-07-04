@@ -1,0 +1,35 @@
+@import "../../styleGuide.module";
+
+.body{
+  height: 483px;
+  width: 100%;
+  padding: 100px 60px;
+  margin-bottom: 60px;
+  border-radius: 8px;
+  background-color: $main-black;
+  display: flex;
+  flex-direction: row;
+
+  .half{
+    width: 50%;
+
+    .logo{
+      margin-bottom: 40px;
+    }
+
+    p{
+      @extend %text-16px-regular;
+      padding-bottom: 40px;
+      color: $main-white;
+      max-width: 500px;
+    }
+
+    .showMoreButton{
+      border-radius: 4px;
+      background-color: $main-blue;
+      color: $main-white;
+      padding: 12px 32px;
+      @extend %text-16px-medium;
+    }
+  }
+}

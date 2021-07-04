@@ -1,0 +1,262 @@
+@import "../../styleGuide.module";
+
+.cardBody {
+  margin: 10px;
+  font-family: "Rubik Regular", sans-serif;
+  box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.08);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover{
+    box-shadow: 0 0 20px rgb(0 0 0 / 17%);
+  }
+
+  .colLeft{
+    display: flex;
+    flex-direction: row;
+
+    .imageBox {
+      padding: 18px;
+      width: 250px;
+      position: relative;
+
+      .imageBoxInner {
+        max-width: 246px;
+        height: 231px;
+        padding-top: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .imageBoxInner img {
+        max-width: 186px;
+      }
+
+      .imageBoxIcons {
+        color: $second-middle-grey;
+        width: 74px;
+        position: absolute;
+        right: 5px;
+        display: flex;
+        font-size: 29px;
+        justify-content: space-between;
+      }
+
+      .action {
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        padding: 5px 8px;
+        background: $second-yellow;
+        border-radius: 3px;
+        @extend %h4-14px-medium
+      }
+    }
+
+    .colCenter {
+
+      .title {
+        padding-top: 28px;
+        @extend %h4-20px-medium
+      }
+
+      .rating {
+        display: flex;
+        flex-direction: row;
+        padding-top: 14px;
+
+        a {
+          padding-right: 13px;
+        }
+
+        p {
+
+          padding-top: 9px;
+          color: $main-blue;
+          @extend %text-12px-regular
+        }
+      }
+
+      .description {
+        font-size: $text-small;
+        display: flex;
+      }
+
+      .descriptionArtAndCode {
+        padding: 16px 0;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .descriptionRow {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .descriptionArtAndCode :nth-child(2) {
+        padding-right: 16px;
+      }
+
+      .descriptionGrey {
+        color: $second-middle-grey
+      }
+    }
+  }
+
+  .colRight {
+    width: 294px;
+    padding: 28px;
+    display: flex;
+    flex-direction: row;
+
+    .cardDash {
+      width: 1px;
+      opacity: 0.2;
+      background-color: $second-middle-grey;
+      margin: -28px 0;
+    }
+
+    .colRightInner {
+      flex-direction: column;
+      padding-left: 28px;
+
+      .oldPrice {
+        color: $second-middle-grey;
+        font-size: $text-big;
+        display: inline-block;
+      }
+
+
+      .colRightTop {
+
+        .oldPriceDash {
+          height: 1px;
+          background-color: $second-middle-grey;
+          position: relative;
+          top: 12px;
+        }
+
+        .newPrice {
+          @extend %h3-24px-medium
+        }
+      }
+
+      .colRightBottom {
+        padding: 20px 0;
+
+        .specials {
+          padding: 11px;
+          margin-bottom: 6px;
+          border: 1px solid $light-grey;
+          box-sizing: border-box;
+          border-radius: 44px;
+          font-size: $text-medium;
+          color: $second-yellow;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .specialsPar {
+          opacity: 1;
+          color: $main-black;
+          padding-left: 10px;
+          @extend %text-12px-regular
+        }
+
+        .specialsMore {
+          font-size: $text-small;
+          color: $main-blue;
+          padding-bottom: 28px;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .buyButton {
+      width: 100%;
+      padding: 12px;
+      border-radius: 4px;
+      background-color: $main-blue;
+      color: $main-white;
+      font-size: $text-big;
+      flex-direction: row;
+      display: flex;
+      justify-content: center;
+    }
+
+    .buyIcon {
+      padding-right: 12px;
+      padding-top: 2px;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .cardBody{
+    flex-direction: column;
+    position: relative;
+
+    .colLeft{
+      .imageBox{
+        position: unset;
+
+        .imageBoxInner{
+          width: 160px;
+
+          img{
+            width: 100%;
+          }
+        }
+      }
+
+      .colCenter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .title{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .rating, .description {
+          display: none;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .imageBox{
+          width: 44vw;
+
+          .imageBoxInner{
+            width: 38vw;
+            padding-top: 38px;
+          }
+        }
+
+        .colCenter{
+          width: 40vw;
+        }
+      }
+    }
+    .colRight{
+      width: 100%;
+
+      .colRightBottom, .cardDash{
+        display: none;
+      }
+
+      .colRightInner{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+    }
+  }
+}

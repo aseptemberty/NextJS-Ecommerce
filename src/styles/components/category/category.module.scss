@@ -1,0 +1,45 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 72px;
+  width: 100%;
+
+  .filterComp{
+    margin-right: 20px;
+    flex-direction: column;
+    display: flex;
+
+    .inner{
+      margin-bottom: 28px;
+      width: 264px;
+      background-color: $second-middle-grey;
+      height: 1400px;
+    }
+  }
+
+  .content{
+    width: calc(100% - 300px);
+  }
+
+  .someText{
+    width: 100%;
+    @extend %text-14px-regular;
+    color: $second-middle-grey;
+    @media (max-width: 400px){
+      width: 93vw;
+    }
+  }
+
+  @media(max-width: 1280px){
+    .filterComp{
+      display: none;
+    }
+
+    .content{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../styleGuide.module";
+
+.inner{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 850px;
+
+  h2{
+    @extend %h2-28px-medium;
+    padding-bottom: 24px;
+  }
+
+  .parag{
+    padding-bottom: 24px;
+
+    h4{
+      @extend %text-16px-medium;
+    }
+    p{
+      @extend %text-16px-regular;
+    }
+  }
+}

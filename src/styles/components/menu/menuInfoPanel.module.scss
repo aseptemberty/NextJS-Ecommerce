@@ -1,0 +1,87 @@
+@import "../../styleGuide.module";
+
+.Buttons{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+
+  .menuIcons{
+    display: flex;
+    flex-direction: row;
+    color: $main-blue;
+
+    .menuIcon{
+      padding: 12px;
+      position: relative;
+      margin-right: 16px;
+    }
+    .menuIconCircle{
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      background-color: $light-orange;
+      color: $main-white;
+      border-radius: 8px;
+      border: 1px solid $main-white;
+      top:6px;
+      right: 6px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      @extend %text-10px-medium;
+    }
+
+  }
+
+  .menuButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 124px;
+    height: 44px;
+    background: $main-blue;
+    border-radius: 4px;
+    color: $main-white;
+    padding: 12px;
+    cursor: default;
+
+    .menuButtonIcon{
+      position: relative;
+
+      .menuIconCircle{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        background-color: $light-orange;
+        color: $main-white;
+        border-radius: 8px;
+        top: -14px;
+        right: -26px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        @extend %text-10px-medium;
+      }
+    }
+  }
+
+  @media(max-width: 475px){
+    margin-left: 10px;
+    align-items: center;
+
+    .menuIcon{
+      padding: 6px!important;
+      margin-right: 5px!important;
+    }
+
+    .menuButton{
+      width: auto;
+      padding: 12px 15px;
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+}

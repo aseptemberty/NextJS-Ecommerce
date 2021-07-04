@@ -1,0 +1,56 @@
+@import "../../styleGuide.module";
+
+.options{
+  font-family: "Rubik Regular", sans-serif;
+  margin-bottom: 32px;
+
+  .item{
+    padding-bottom: 17px;
+
+    .selector{
+      position: relative;
+      width: 264px;
+      height: 44px;
+
+      select{
+        border: 1px solid rgba(198, 200, 205, 0.4);
+        background: rgba(243, 246, 250, 0.1);
+        width: 100%;
+        border-radius: 4px;
+        padding: 12px 12px 10px;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+      }
+      select:focus{
+        outline: none;
+        box-shadow: none;
+        border: solid 1px $second-middle-grey;
+      }
+
+
+    }
+    .color{
+      margin-right: 15px;
+      background: $second-light-grey;
+      padding: 9px;
+      border-radius: 20px;
+    }
+
+    p{
+      @extend %text-14px-regular;
+    }
+  }
+
+
+  .title{
+    @extend %text-12px-medium;
+    color: $second-middle-grey;
+    padding-bottom: 8px;
+  }
+
+  button:focus{
+    outline: none;
+  }
+}

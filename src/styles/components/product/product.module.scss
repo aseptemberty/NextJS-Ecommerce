@@ -1,0 +1,130 @@
+@import "../../styleGuide.module";
+
+
+.titleWrap{
+  position: relative;
+
+  h1{
+    width: 60vw;
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  .icons{
+    position: absolute;
+    right: 0;
+    top:7px;
+    display: flex;
+    flex-direction: row;
+
+    .icon{
+      display: flex;
+      flex-direction: row;
+      color:$second-middle-grey;
+      padding-right: 30px;
+      align-items: flex-end;
+
+      span{
+        padding-right: 12px;
+      }
+      p{
+        @extend %text-14px-regular;
+        padding-bottom: 1px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .icons{
+      top:8px;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 850px) {
+    h1{
+      width: 90vw;
+    }
+
+    .icons{
+      top:82px;
+      left: 30%;
+      p {
+        display: none
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    h1{
+      text-overflow: ellipsis;
+    }
+
+    .icons{
+      top:82px;
+      right:10px;
+      left: auto;
+
+      .icon{
+        padding-right: 8px;
+      }
+
+      p{
+        display: none;
+      }
+    }
+  }
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+
+  .topImage{
+    width: 60%;
+  }
+
+  .char{
+    width: 40%;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .titleWrap{
+    height: 80px;
+  }
+
+  .top{
+
+    flex-direction: column;
+
+    .topImage{
+      width: 100%;
+    }
+
+    .char{
+      width: 100%;
+    }
+  }
+}
+
+
+
+.centerLine{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-grey;
+  border-top: 1px solid $light-grey;
+  margin-bottom: 60px;
+
+  :nth-child(2){
+    button{
+      padding: 12px;
+    }
+  }
+}

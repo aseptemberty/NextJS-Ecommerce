@@ -1,0 +1,44 @@
+@import "../../styleGuide.module";
+
+.carousel{
+  padding: 35px 0;
+  :first-child{
+
+    button{
+
+      p{
+        font-weight: 900;
+        transform: scaleY(1.5);
+      }
+    }
+
+    :focus{
+      outline: none!important;
+    }
+
+    :nth-child(2){
+      display: flex;
+      justify-content: center;
+      padding: 0 35px;
+
+
+      *{
+        border: none!important;
+      }
+
+      ul{
+        li{
+          padding: 1.09em;
+
+        }
+      }
+    }
+
+    }
+  :last-child{
+    ul{
+      li{
+      height: 30px !important;
+    }}
+  }
+}

@@ -1,0 +1,74 @@
+@import '../../styleGuide.module';
+
+.card{
+  border-radius: 8px;
+  padding: 44px 48px 44px 0;
+  height: 214px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .image{
+    width: 205px;
+    margin-right: 32px;
+  }
+
+  h3{
+    @extend %h3-24px-medium;
+    color:$main-white;
+    padding-bottom: 13px;
+    max-width: 200px;
+  }
+
+  p{
+    @extend %text-14px-regular;
+    color: $main-white;
+    padding-bottom: 16px;
+    max-width: 200px;
+  }
+
+  button{
+    background-color: $main-white;
+    border-radius: 4px;
+    @extend %text-12px-medium;
+    padding: 8px 20px;
+  }
+
+  @media (max-width: 1500px) {
+    width: calc(100vw - 1004px);
+    padding: 32px 20px 32px 0;
+    align-items: center;
+
+    .image{
+      margin-right: 12px;
+      width: 150px;
+    }
+
+    h3{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    p{
+      padding-bottom: 8px;
+    }
+  }
+
+  @media(max-width: $tablet){
+    width: 100%;
+    padding: 45px 0;
+    align-items: center;
+
+    h3{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    p{
+      padding-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import "../../../styleGuide.module";
+
+.wrapper{
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid $light-grey;
+
+  .title{
+    @extend %h4-20px-medium;
+    padding-bottom: 20px;
+  }
+
+  .status{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 22px;
+
+    .item{
+      border-radius: 3px;
+      margin-right: 10px;
+      padding: 5px 8px;
+      @extend %text-14px-medium;
+    }
+  }
+
+  .info{
+    .item{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 22px;
+
+      span{
+        color: $main-blue;
+        padding-right: 16px;
+      }
+
+      .column{
+        display: flex;
+        flex-direction: column;
+      }
+
+      p{
+        @extend %text-14px-regular;
+      }
+
+      .bold{
+        @extend %text-14px-medium;
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  .product{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    border-top: 1px solid $light-grey;
+    justify-content: space-between;
+
+    .half{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &:first-child{
+        padding-right: 10px;
+      }
+
+      &:nth-child(2){
+        justify-content: space-between;
+      }
+
+      .imageBox{
+        width: 80px;
+        height: 80px;
+        background-color: $second-middle-grey;
+        margin-right: 32px;
+      }
+
+      p{
+        @extend %text-14px-regular;
+        max-width: 420px;
+      }
+
+      .price{
+        @extend %text-14px-medium;
+        padding-left: 40px;
+      }
+    }
+  }
+
+  .summary{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-top: 1px solid $light-grey;
+    padding-top: 20px;
+
+    p{
+      @extend %text-12px-regular;
+      padding-bottom: 4px;
+    }
+
+    h2{
+      @extend %h2-28px-medium;
+      color: $main-blue;
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+  
+  @media (max-width: 767px) {
+    .title{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 18px;
+    }
+
+    .product{
+      flex-direction: column;
+
+      .half{
+        &:nth-child(2){
+          padding-left: 80px;
+          padding-top: 8px;
+        }
+
+        .imageBox{
+          width: 60px;
+          height: 60px;
+          margin-right: 20px;
+        }
+
+        p{
+          max-width: calc(100% - 80px);
+        }
+      }
+    }
+
+    .summary{
+      .inner{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        p{
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

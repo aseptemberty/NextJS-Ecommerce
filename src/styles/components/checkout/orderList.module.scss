@@ -1,0 +1,230 @@
+@import "../../styleGuide.module";
+
+.card{
+  margin: 10px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.08);
+  border-radius: 8px;
+  width: 27vw;
+  min-width: 420px;
+
+  .title{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 16px;
+
+    h4{
+      @extend %h4-20px-medium;
+      padding-right: 4px;
+    }
+
+    .number{
+      color: $second-middle-grey;
+      padding-left: 8px;
+    }
+    p{
+      @extend %text-16px-medium;
+    }
+
+  }
+
+  .sumTitle{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 8px;
+    justify-content: space-between;
+
+    h3{
+      @extend %h3-24px-medium;
+      color: $main-blue;
+      padding-left: 8px;
+    }
+
+    p{
+      @extend %text-16px-medium;
+    }
+  }
+
+  .imageWrapper{
+    padding-right: 20px;
+    padding-top: 8px;
+    
+    .img{
+      width: 60px;
+      height: 60px;
+      background-color: $second-middle-grey;
+    }
+  }
+
+  .item{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: $light-grey;
+
+    .priceBlock{
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      align-items: baseline;
+
+      .newPrice{
+        @extend %text-14px-medium;
+        padding-right: 8px;
+      }
+
+      .oldPrice{
+        @extend %text-12px-medium;
+        color: $second-middle-grey;
+        text-decoration: line-through;
+      }
+      &:nth-child(3){
+        border-bottom: none;
+      }
+    }
+
+    .link{
+      border: none;
+      color: $main-blue;
+      @extend %text-14px-regular;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: $opacity2-main-blue;
+      padding: 0;
+      text-align: left;
+    }
+
+    .showMoreLink{
+      border: none;
+      color: $main-blue;
+      @extend %text-14px-regular;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: $opacity2-main-blue;
+      padding: 24px 0 0;
+      text-align: left;
+    }
+
+    .adress{
+      color: $second-middle-grey;
+      @extend %text-14px-regular;
+      padding: 2px 0 4px;
+    }
+
+    .row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid $light-grey;
+      padding-bottom: 20px;
+
+      p{
+        @extend %text-14px-regular;
+        padding-bottom: 8px;
+      }
+    }
+
+    .confirm{
+      height: 48px;
+      background-color: $light-orange;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      @extend %text-16px-medium;
+      color: $main-white;
+      border-radius: 8px;
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .half{
+      padding-bottom: 18px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    width: auto;
+    min-width: 100%;
+
+    .row{
+      justify-content: start;
+      align-items: center;
+    }
+
+    .middle{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .half{
+        width: 50%;
+      }
+    }
+
+    .bottom{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .confirm{
+      padding: 12px 32px;
+      width: max-content;
+      align-self: center;
+    }
+  }
+
+
+  .bottom{
+    align-items: baseline;
+
+    .priceBlock{
+      flex-direction: column;
+    }
+
+    .productName{
+      padding-right: 40px;
+    }
+  }
+}
+
+.agreement{
+  @extend %text-14px-regular;
+  color: $second-middle-grey;
+  padding-top: 24px;
+  width: 370px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .card{
+    padding: 24px;
+
+    .middle{
+      flex-direction: column;
+
+      .half{
+        width: 100%;
+      }
+    }
+
+    .row{
+      align-items: flex-start;
+      .bottom{
+        flex-direction: column;
+      }
+    }
+  }
+  .agreement{
+    padding-top: 18px;
+  }
+}

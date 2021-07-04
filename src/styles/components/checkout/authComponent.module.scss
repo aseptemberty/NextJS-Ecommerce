@@ -1,0 +1,46 @@
+@import "../../styleGuide.module";
+
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+
+  p{
+    @extend %text-14px-regular;
+    color: $second-middle-grey;
+    height: 40px;
+  }
+
+  button{
+    width: 169px;
+    height: 48px;
+    border-radius: 4px;
+    color: $main-white;
+    background-color: $main-blue;
+    @extend %text-16px-medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 28px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  @media (max-width: $mobile){
+    flex-direction: column;
+    margin-bottom: 18px;
+
+    p{
+      height: auto;
+    }
+
+    button{
+      width: 100%;
+      margin-bottom: 18px;
+      margin-right: 0;
+    }
+  }
+}

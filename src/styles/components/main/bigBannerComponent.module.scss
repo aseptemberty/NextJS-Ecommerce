@@ -1,0 +1,90 @@
+@import '../../styleGuide.module';
+
+.card{
+  border-radius: 8px;
+  background-image: url("../../../../public/images/Nikon.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+
+  .top{
+    position: relative;
+
+    p{
+      position: absolute;
+      top: 26px;
+      left: 43px;
+      @extend %text-14px-medium;
+      max-width: 110px;
+      text-align: center;
+    }
+
+    .action{
+      position: absolute;
+      padding: 5px 8px;
+      background-color: $second-yellow;
+      @extend %text-14px-medium;
+      border-radius: 3px;
+      top: 20px;
+      right: 19px;
+    }
+  }
+
+  h1{
+    color: $main-white;
+    @extend %h1-32px-medium;
+    max-width: 185px;
+    position: absolute;
+    top: 144px;
+    left: 44px;
+  }
+
+  .sale{
+    position: absolute;
+    bottom: 37px;
+    right: 132px;
+    color: $main-white;
+    @extend %text-12px-regular;
+  }
+
+  @media(max-width: $tablet){
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 40px;
+
+    .top{
+      p{
+        left: 9%;
+      }
+    }
+    h1{
+      top:200px;
+    }
+
+    .sale{
+      right: 16%;
+    }
+  }
+
+  @media(max-width: $mobile){
+    margin-bottom: 24px;
+    height: 260px;
+
+    .top{
+      p{
+        left: 7%;
+      }
+    }
+
+    h1{
+      top:50%
+    }
+
+    .sale{
+      right: 7%;
+    }
+  }
+}

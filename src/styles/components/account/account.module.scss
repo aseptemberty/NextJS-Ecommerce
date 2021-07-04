@@ -1,0 +1,14 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: row;
+
+  .tabs{
+    width: 100%;
+  }
+
+  @media(max-width: 1240px){
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+
+  @media(max-width: 960px){
+    flex-wrap: wrap;
+    .item{
+      margin-bottom: 12px;
+    }
+  }
+  .item{
+    padding: 11px 16px;
+    border: 1px solid $light-grey;
+    box-sizing: border-box;
+    border-radius: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+
+
+
+    span{
+      color:$second-yellow;
+      padding-right: 10px;
+    }
+
+    p{
+      @extend  %text-12px-regular;
+      padding-right: 0;
+    }
+  }
+
+}

@@ -1,0 +1,64 @@
+@import "../../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+
+  .card{
+    border: 1px solid $light-grey;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+
+    .image{
+      background-color: $second-light-grey;
+      width: 264px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .right{
+      padding: 24px;
+
+      .date{
+        @extend %text-12px-regular;
+        color: $second-middle-grey;
+      }
+
+      .name{
+        padding: 12px 0;
+        @extend %text-16px-regular;
+      }
+
+      .desc{
+        @extend %text-14px-regular
+      }
+    }
+  }
+
+  @media (max-width: 867px) {
+    width: 100%;
+
+    .card{
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    .card{
+      flex-direction: column;
+      .image{
+        width: 100%;
+
+      }
+    }
+  }
+}
+

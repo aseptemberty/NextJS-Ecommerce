@@ -1,0 +1,15 @@
+@import "../../styleGuide.module";
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 25%;
+  border: 1px solid $second-middle-grey;
+  box-sizing: border-box;
+
+  p{
+    @extend %h3-24px-medium;
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../styleGuide.module";
+
+.card{
+  height: 450px;
+  border-radius: 8px;
+  border:3px solid $main-black;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 264px;
+
+  .top
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h4{
+      @extend %h4-20px-medium;
+    }
+
+    .action{
+      @extend %text-14px-medium;
+      padding: 5px 8px;
+      border-radius: 3px;
+      background-color: $second-yellow;
+    }
+  }
+
+  .center{
+    .image{
+      padding: 32px 28px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    p{
+      padding-top: 24px;
+      @extend %text-14px-regular;
+    }
+  }
+
+  .bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .priceBlock{
+      display: flex;
+      flex-direction: column;
+
+      .oldPrice{
+        @extend %text-14px-regular;
+        color: $second-middle-grey;
+        text-decoration: line-through;
+        text-decoration-style: solid;
+      }
+
+      .newPrice{
+        @extend %h4-20px-medium;
+      }
+    }
+  }
+
+  @media(max-width: $mobile){
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 24px;
+    height: 280px;
+
+    .center{
+      display: flex;
+      flex-direction: row;
+
+      .image{
+        width: 140px;
+        height: 116px;
+        padding: 18px 30px;
+      }
+    }
+  }
+}

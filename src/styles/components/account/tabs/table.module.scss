@@ -1,0 +1,76 @@
+@import "../../../styleGuide.module";
+
+.title{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 25px 10px;
+  border-top: 1px solid $light-grey;
+
+  p{
+    @extend %text-14px-regular;
+    padding-right: 20px;
+  }
+
+  .half{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .mail{
+    color: $second-middle-grey;
+    margin-right: 20px;
+  }
+
+  .activeMail{
+    color: $main-blue;
+    position: relative;
+    margin-right: 20px;
+
+    .circle{
+      position: absolute;
+      top: -4px;
+      right: -6px;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      color: $main-white;
+      border: 1px solid $main-white;
+      background-color: $light-orange;
+
+      p{
+        @extend  %text-10px-regular;
+        position: absolute;
+        top: 0;
+        right: -16px;
+      }
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 18px 0;
+
+    .half{
+      justify-content: space-between;
+
+      .mail{
+        padding: 0;
+      }
+
+      button{
+        margin-right: 20px;
+      }
+
+      &:first-child{
+        padding-bottom: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../styleGuide.module";
+
+.subtitle{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom:24px;
+
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+    .rating{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      div{
+        padding-right: 12px;
+      }
+      p{
+        color: $main-blue;
+        padding-top: 4px;
+      }
+    }
+
+    .artCode{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+    }
+    p{
+      @extend %text-14px-regular;
+      padding-right: 30px;
+
+      @media (max-width: 767px){
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+
+  .bottom{
+    margin-top: 24px;
+  }
+
+  @media (max-width: 767px){
+    border-bottom: none;
+    margin-bottom: 0;
+
+    .top{
+      flex-direction: column;
+      align-items: baseline;
+
+      p{
+        font-size: 12px;
+        line-height: 14px;
+        padding-top: 0;
+      }
+    }
+  }
+}

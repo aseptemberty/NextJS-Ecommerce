@@ -1,0 +1,21 @@
+@import "../../styleGuide.module";
+
+.body{
+  margin-bottom: 60px;
+
+  .title{
+    @extend %h2-28px-medium;
+    padding-bottom: 24px;
+  }
+
+}
+
+.item{
+  border: 1px solid $second-middle-grey;
+  height: 80px;
+  min-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}

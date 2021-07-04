@@ -1,0 +1,18 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: column;
+
+  .card{
+    background-color: $second-middle-grey;
+    border-radius: 10px;
+    height: 174px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  p{
+    @extend %text-16px-regular;
+  }
+}

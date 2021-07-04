@@ -1,0 +1,104 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+
+  .item{
+    position: relative;
+
+    label{
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      @extend %text-10px-regular;
+      color: $second-middle-grey;
+    }
+
+    input{
+      width: 100%;
+      height: 52px;
+      background: rgba(243, 246, 250, 0.1);
+      border: 1px solid rgba(198, 200, 205, 0.4);
+      box-sizing: border-box;
+      border-radius: 4px;
+      position: relative;
+      margin-bottom:20px;
+      padding: 10px 12px;
+      @extend %text-14px-regular;
+
+      &::placeholder{
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        content: 'Промокод';
+        @extend %text-10px-regular;
+        color: $second-middle-grey;
+      }
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .apply{
+      border-radius: 4px;
+      background-color: $light-blue;
+      color: $main-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 32px;
+      height: 48px;
+
+      p{
+        @extend %text-16px-medium;
+      }
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+}
+
+@media (max-width: 1230px) {
+  .body{
+    padding: 0;
+    flex-direction: row;
+
+    .item{
+      display: flex;
+      flex-direction: row;
+
+      input{
+        margin-right: 16px;
+      }
+
+      .apply{
+        height: 52px;
+      }
+    ;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .body{
+    padding: 0 8px;
+
+    .item{
+      flex-direction: column;
+      width: 100%;
+
+      input{
+        width: 100%;
+      }
+
+      .apply{
+        width: fit-content;
+      }
+    }
+  }
+}

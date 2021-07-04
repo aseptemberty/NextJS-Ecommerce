@@ -1,0 +1,35 @@
+@import "../../styleGuide.module";
+
+.review{
+  padding-bottom: 60px;
+
+  h2{
+    @extend %h2-28px-medium;
+    padding-bottom: 24px;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .item{
+      padding: 1px;
+      .card{
+        border-radius: 10px;
+        background-color: $second-light-grey;
+        height: 174px;
+        margin-bottom: 20px;
+      }
+
+      p{
+        @extend %text-16px-regular;
+        margin-bottom: 13px;
+      }
+
+      .date{
+        @extend %text-12px-regular;
+      }
+    }
+  }
+}

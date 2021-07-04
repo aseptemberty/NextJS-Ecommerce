@@ -1,0 +1,35 @@
+@import "../../styleGuide.module";
+
+#nestedCategories{
+
+  h2{
+    @extend %h2-28px-medium;
+    padding-bottom: 32px;
+  }
+
+  .items{
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .item{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 52px;
+      padding-right: 5%;
+
+      .title{
+        @extend %text-16px-medium;
+        color: $main-black;
+      }
+
+      a{
+        @extend %text-14px-regular;
+        color: rgba(47, 52, 66, 0.4);
+        padding-bottom: 12px;
+      }
+    }
+  }
+}

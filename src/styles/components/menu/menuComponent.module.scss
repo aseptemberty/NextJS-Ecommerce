@@ -1,0 +1,63 @@
+@import "../../styleGuide.module";
+
+#menuWrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: $main-white;
+
+  .menuTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+
+    .menuTopSearch {
+      width: 100%;
+    }
+
+    p {
+      padding-left: 20px;
+      @extend %text-12px-medium;
+    }
+
+    @media (max-width: 430px) {
+      padding: 0 0.4em;
+    }
+  }
+
+  .menuBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    .menuBottomSearch {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .menuTop {
+      border-bottom: none;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .menuBottom {
+      height: 52px;
+      padding-bottom: 17px;
+
+      .menuBottomSearch {
+        width: auto;
+        padding-right: 10px;
+      }
+    }
+  }
+}

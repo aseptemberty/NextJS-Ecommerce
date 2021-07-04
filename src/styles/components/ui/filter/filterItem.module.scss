@@ -1,0 +1,65 @@
+@import "../../../styleGuide.module";
+
+.item{
+  padding-bottom: 20px;
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .range{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 20px;
+
+    .half{
+      width: 50%;
+
+      &:first-child{
+        padding-right: 20px;
+      }
+
+      input{
+        width: 100%;
+      }
+    }
+  }
+
+  .inputBox{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 8px;
+
+    div{
+      @extend %text-14px-regular;
+      display: flex;
+      flex-direction: row;
+      padding-right: 4px;
+
+      p{
+        padding-top: 4px;
+      }
+    }
+
+    .amount{
+      color: $second-middle-grey;
+      padding-left: 4px;
+    }
+  }
+
+  .showMore{
+    @extend %text-12px-regular;
+    color: $main-blue;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    align-self: baseline;
+    padding-top: 12px;
+  }
+}

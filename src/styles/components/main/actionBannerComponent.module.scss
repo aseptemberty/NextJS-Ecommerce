@@ -1,0 +1,139 @@
+@import '../../styleGuide.module';
+
+.actionBanner{
+  height: 406px;
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+
+  .half{
+    width: 50%;
+    color: $main-white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 80px;
+
+    h2{
+      @extend %h2-28px-medium;
+      max-width: 400px;
+    }
+
+    p{
+      @extend %text-16px-regular;
+      max-width: 400px;
+    }
+
+    button{
+      padding: 12px 32px;
+      color: $main-black;
+      background-color: $main-white;
+      border-radius: 4px;
+      width: fit-content;
+
+      p{
+        @extend %text-16px-medium;
+      }
+    }
+  }
+
+  .half:first-child{
+    background-color: $main-green;
+    padding: 60px 0 60px 80px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .half:nth-child(2){
+    background-color: $main-blue;
+    padding: 60px 80px 60px 0;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+
+    h2, p, button{
+      align-self: flex-end;
+    }
+
+    button{
+      margin-right: 270px;
+    }
+  }
+
+  @media (max-width: $tablet){
+    height: fit-content;
+
+    .half{
+      h2{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 200px;
+        padding-bottom: 12px;
+      }
+
+      p{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 200px;
+        padding-bottom: 24px;
+      }
+
+      &:first-child{
+        padding: 32px 0 32px 40px;
+      }
+
+      &:nth-child(2){
+        padding: 32px 40px 32px 0;
+
+        button{
+          margin-right: 70px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    height: fit-content;
+
+    .half{
+      width: 100%;
+
+      h2{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 8px;
+        max-width: 100%;
+      }
+
+      p{
+        padding-bottom: 16px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 100%;
+      }
+
+      &:first-child{
+        padding: 28px 28px 82px 28px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+      }
+
+      &:nth-child(2){
+        padding: 82px 28px 28px 28px;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0;
+
+        h2,p,button{
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+

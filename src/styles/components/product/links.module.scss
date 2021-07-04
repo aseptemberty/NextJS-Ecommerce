@@ -1,0 +1,102 @@
+@import "../../styleGuide.module";
+
+.body{
+  font-family: "Rubik Regular", sans-serif;
+  padding: 32px;
+  position: relative;
+  margin: 10px;
+
+  button:focus{
+    outline: none;
+  }
+
+  .half{
+    padding-top: 26px;
+    padding-bottom: 24px;
+
+    p{
+      @extend %text-12px-regular;
+      color:$second-middle-grey;
+    }
+
+    .link{
+      display: flex;
+      flex-direction: row;
+      color: $main-blue;
+      padding-bottom: 20px;
+
+      p{
+        margin-left: 10px;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        @extend %text-14px-regular;
+        color: $main-blue;
+      }
+    }
+
+    .bottom{
+      display: flex;
+      flex-direction: row;
+
+      .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        button{
+          display: flex;
+          flex-direction: row;
+          color:$second-middle-grey;
+          position: relative;
+          margin-right: 20px;
+          width:max-content;
+
+          :focus{
+            outline: none;
+          }
+
+          p{
+            @extend %text-14px-regular;
+            padding-left: 25px;
+          }
+
+          span{
+            position: absolute;
+            top:0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .halfLinkBody{
+    display: flex;
+    flex-direction: row;
+    color: $main-blue;
+    margin-bottom: 20px;
+    @extend %text-14px-regular;
+
+    .halfLink{
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      color: $main-blue;
+      margin-right: 10px;
+    }
+
+    p{
+      color: $second-middle-grey;
+      margin-right: 10px;
+    }
+  }
+
+
+  .half:first-child{
+    border-bottom: 1px solid $light-grey;
+  }
+  
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
+}

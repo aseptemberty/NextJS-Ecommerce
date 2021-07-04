@@ -1,0 +1,144 @@
+@import "../../../styleGuide.module";
+
+.inner{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 835px;
+
+  .top{
+    padding-bottom: 24px;
+    border-bottom: 1px solid $light-grey;
+
+    .instructions{
+      padding: 32px;
+      background-color: $light-blue;
+      border: 1px solid #F3F6FA;
+      border-radius: 8px;
+      margin: 40px 0;
+
+      h3{
+        @extend %h4-20px-medium;
+        padding-bottom: 24px;
+      }
+
+      .links{
+        display: flex;
+        flex-direction: row;
+
+        a{
+          position:relative;
+          padding-left: 30px;
+          color:$main-blue;
+          padding-right: 60px;
+
+          .icon{
+            position: absolute;
+            top:0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .chars{
+    display: flex;
+    flex-direction: row;
+    @extend %text-16px-medium;
+    border-bottom: 1px solid $light-grey;
+    padding:24px 0;
+
+    h4{
+      width: 33%;
+    }
+
+    .desc{
+      flex-direction: row;
+      width:66%;
+      align-items: baseline;
+
+      .descItem{
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
+        align-items: baseline;
+        padding-bottom: 24px;
+        padding-right: 15px;
+
+        p{
+          @extend %text-16px-regular;
+        }
+
+        :first-child{
+          color: $second-middle-grey;
+          @extend %text-12px-medium;
+          padding-bottom: 9px;
+        }
+      }
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  @media (max-width: 767px){
+    .top{
+      position: relative;
+
+      .instructions{
+        position: absolute;
+        left: 40%;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        .links{
+          a{
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+
+    .chars{
+      flex-direction: column;
+
+      .desc{
+        flex-direction: column;
+
+        .descItem{
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 600px){
+    .top{
+      position: relative;
+      padding-bottom: 75px;
+
+      h1{
+        padding-bottom: 20px;
+      }
+
+      .instructions{
+        position: absolute;
+        left: 0;
+        top:45px;
+
+        .links{
+          flex-direction: column;
+
+          .a{
+            padding-bottom: 18px;
+          }
+        }
+      }
+    }
+  }
+}

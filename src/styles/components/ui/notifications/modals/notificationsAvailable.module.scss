@@ -1,0 +1,80 @@
+@import "../../../../styleGuide.module";
+
+.card{
+  position: fixed;
+  box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.12);
+  border-radius: 8px;
+  padding: 60px 52px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1202;
+  background-color: $main-white;
+
+  .close{
+    position: absolute;
+    color: $second-middle-grey;
+    background-color: white;
+    border: none;
+    top: 18px;
+    right: 18px;
+    padding: 0;
+  }
+
+  h3{
+    @extend %h3-24px-medium;
+    padding-bottom: 20px;
+  }
+
+  p{
+    @extend %text-14px-regular;
+    padding-bottom: 28px;
+    max-width: 352px;
+    text-align: center;
+  }
+
+  .input{
+    position: relative;
+    padding-bottom: 28px;
+
+    input{
+      border-radius: 4px;
+      background-color: $light-blue;
+      border: 1px solid rgba(198, 200, 205, 0.2);
+      height: 44px;
+      width: 100%;
+
+      &:focus{
+        outline: none;
+        background-color: $main-white;
+      }
+    }
+
+    label{
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      color: $second-middle-grey;
+      @extend %text-14px-regular;
+    }
+  }
+
+  button{
+    color: $main-white;
+    background-color: $main-blue;
+    padding: 12px 32px;
+    border-radius: 4px;
+    @extend %text-16px-medium;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  .grey{
+    @extend %text-12px-regular;
+    color: $second-middle-grey;
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+}

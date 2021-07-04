@@ -1,0 +1,98 @@
+@import "../../styleGuide.module";
+
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
+  .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .filterButton{
+      width: auto;
+      padding: 0 13px;
+      @extend %text-14px-medium;
+      height: 44px;
+      margin-right: 8px;
+      background-color: $light-blue;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      color: $main-blue;
+
+      p{
+        padding-left: 12px;
+      }
+    }
+
+    .buttonOption{
+      height: 44px;
+      width: 44px;
+      margin-right: 8px;
+      border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button:focus{
+      outline: none;
+    }
+
+    .buttonActive{
+      background-color: $main-blue;
+      color:$main-white;
+      @extend .buttonOption
+    }
+
+    .buttonInactive{
+      background-color: $light-blue;
+      color: $main-blue;
+      @extend .buttonOption
+    }
+
+    .buttonFirsts{
+      border: 1px solid rgba(198, 200, 205, 0.4);
+      width: max-content;
+      height: fit-content;
+      padding: 12px 12px 10px;
+      background: rgba(243, 246, 250, 0.1);
+      display: flex;
+      flex-direction: row;
+      margin-right: 8px;
+
+      span{
+        color: $main-blue;
+      }
+
+      p{
+        color: $main-black;
+        @extend %text-14px-regular;
+        padding-right: 74px;
+
+        @media (max-width: 400px) {
+          padding-right: 12px ;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1279px) {
+    flex-direction: column;
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 16px;
+
+    h1{
+      padding-bottom: 16px;
+    }
+
+    .right{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

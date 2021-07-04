@@ -1,0 +1,55 @@
+@import "../../styleGuide.module";
+
+#wrapper{
+  position: relative;
+
+  input{
+    height: 44px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: $light-blue;
+    width: 100%;
+    border: 1px solid rgba(198, 200, 205, 0.4);
+
+    &:focus{
+      outline: none;
+    }
+    &::placeholder{
+      @extend %text-14px-regular;
+      color: $second-middle-grey;
+    }
+  }
+
+  &:hover, &:active{
+    span{
+      color:$main-blue
+    }
+
+    input{
+      background-color: $main-white;
+    }
+  }
+
+  .icon{
+    position: absolute;
+    top:12px;
+    right: 12px;
+  }
+
+  .listGroup{
+    position: absolute;
+    width: 100%;
+    top:52px;
+    padding: 16px 12px 14px;
+    box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.08);;
+  }
+
+  li{
+    padding-bottom: 12px;
+    @extend %text-14px-regular;
+
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+}

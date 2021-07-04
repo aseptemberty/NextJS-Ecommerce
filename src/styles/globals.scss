@@ -1,0 +1,11 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+}

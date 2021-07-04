@@ -1,0 +1,25 @@
+@import "../../styleGuide.module";
+
+.menuInput{
+  position: relative;
+  width: 96%;
+  margin-left: 30px;
+}
+.menuInputField {
+  padding-top: 14px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+  outline: none;
+  background: #F3F6FA;
+  border: 1px solid rgba(198, 200, 205, 0.1);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  color: $second-middle-grey;
+  @extend %text-14px-regular;
+}
+.menuInputFieldSvg {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}

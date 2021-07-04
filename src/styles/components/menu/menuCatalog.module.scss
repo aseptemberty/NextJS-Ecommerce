@@ -1,0 +1,157 @@
+@import "../../styleGuide.module";
+
+.menuContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .menuCatalogButton{
+    height: 44px;
+    padding: 0 14px;
+    background-color: $second-light-blue;
+    border-radius: 4px;
+    color: $main-blue;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    cursor: default;
+    align-items: center;
+
+    span{
+      padding-right: 16px;
+      padding-bottom: 4px;
+    }
+
+    p{
+      width: 116px;
+      @extend %text-14px-regular;
+    }
+  }
+  .menuCatalogButton:focus{
+    outline: none;
+  }
+
+  .dropDown{
+    display: flex;
+    position: absolute;
+    background: transparent;
+    width: max-content;
+    max-width: 100vw;
+    top:52px;
+    left: 0;
+    z-index: 3;
+    border-radius: 10px;
+    margin-left: -1.5rem;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+    .menu {
+
+      box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.12);
+      background-color: $main-white;
+      border-right: 1px solid #dddddd;
+
+      nav{
+
+        ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li{
+            border-bottom: 1px solid #dddddd;
+            width:268px;
+            margin:0;
+            padding:0;
+
+            &:last-child{
+              border-bottom: none;
+            }
+
+            button{
+              text-decoration: none;
+              color: #333333;
+              width: 100%;
+              text-align: left;
+              position:relative;
+              display: block;
+              outline: none;
+              background-color: transparent;
+              padding:16px 20px;
+              @extend %text-16px-regular;
+
+              span{
+                position: absolute;
+                top:22px;
+                right:16px;
+              }
+            }
+            button.active{
+              background: $main-blue;
+              color: $main-white;
+            }
+          }
+        }
+      }
+    }
+    .menuNestedContainer{
+      background-color: $main-white;
+      width: calc(100vw - 284px);
+      min-width: 500px;
+      padding: 32px;
+      display: inline-flex;
+      flex-direction: column;
+      height:inherit;
+      position: relative;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.12);
+    }
+  }
+
+  .dropDown.active{
+    visibility: visible;
+  }
+
+  @media (max-width: 767px){
+    width: 100%;
+
+    .dropDown{
+      max-width: 100vw!important;
+      width: 97vw !important;
+    }
+    .menu {
+      width: 100vw;
+      nav{
+        ul {
+          li {
+            width: 100% !important;
+
+            button{
+            }
+          }
+        }
+      }
+    }
+
+    .menuNestedContainer{
+      display: none!important;
+    }
+    .menuCatalogButton{
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 575px) {
+   .dropDown{
+     width: 100vw!important;
+   }
+  }
+}
+
+
+
+

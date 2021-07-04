@@ -1,0 +1,297 @@
+@import "../styleGuide.module";
+
+.footer {
+  background: $main-black;
+  color: $main-white;
+
+  .top{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+    justify-content: space-between;
+
+    h4{
+      @extend %h4-20px-medium;
+      padding-bottom: 24px;
+    }
+
+    p{
+      @extend  %text-14px-regular;
+      padding-bottom: 12px;
+    }
+
+    button:focus{
+      outline: none;
+    }
+
+    .topRight{
+      h4{
+        padding-bottom: 8px;
+      }
+
+      p{
+        opacity: 0.2;
+      }
+
+      .socialIcons{
+        display: flex;
+        flex-direction: row;
+        padding-top: 28px;
+        padding-bottom: 44px;
+
+        .socialIcon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          border: 1px solid $main-white;
+          margin-right: 20px;
+        }
+      }
+
+      .yaMarket{
+        display: flex;
+        flex-direction: row;
+
+        .icon{
+          position: relative;
+
+          .iconInner{
+            position: absolute;
+            top:-6px;
+            transform: rotate(90deg);
+          }
+
+          .cart{
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            color:$dark-grey;
+          }
+        }
+
+        .yaRating{
+          padding-left: 60px;
+          align-items: center;
+
+          h5{
+            @extend %text-14px-medium
+          }
+
+          p{
+            opacity: 1;
+            @extend  %text-10px-regular
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .subscribe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #C6C8CD;
+
+    .sale{
+      padding-right: 30px;
+      h3{
+        @extend %h4-20px-medium
+      }
+      p{
+        @extend  %text-12px-regular;
+
+        .link{
+          text-decoration: underline;
+        }
+      }
+    }
+    .subscription{
+      display: flex;
+      flex-direction: row;
+
+      input{
+        padding-left: 12px;
+        margin-right: 20px;
+        min-width: 335px;
+        height: 40px;
+        background-color: $light-blue;
+        color: #C6C8CD;
+        border-radius: 4px;
+        @extend %text-14px-regular;
+        outline: none;
+      }
+
+      button{
+        width: 170px;
+        height: 40px;
+        border: 1px solid $main-white;
+        padding: 0 20px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @extend %text-14px-medium;
+        margin-right: 20px;
+
+        span{
+          padding: 0 10px;
+        }
+      }
+
+      p{
+        @extend %text-10px-regular;
+      }
+    }
+  }
+  .paymentPartners{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $main-white;
+
+    .item{
+      padding-right: 44px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      p{
+        padding-left: 5px;
+      }
+    }
+  }
+  .bottom{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0 30px;
+    opacity: 0.2;
+    @extend %text-14px-medium;
+
+    .title{
+      padding-right: 90px;
+    }
+    p{
+      padding-right: 20px;
+    }
+
+    span{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .top{
+      padding: 40px 0;
+      display: inline-flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .topRight{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    .sale{
+      width: 40%;
+      align-self: baseline;
+    }
+
+    .subscription{
+      display: inline-flex;
+      flex-wrap: wrap;
+
+      button{
+        width: 50%;
+        margin-bottom: 12px;
+      }
+      input{
+        width: 50%;
+      }
+      p{
+
+      }
+    }
+
+    .bottom{
+      flex-direction: column;
+
+      .title{
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 767px){
+    .top{
+      display: flex;
+      flex-direction: column;
+
+      h4{
+        font-family: "Rubik Semi-bold", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 0;
+      }
+
+      div{
+        position: relative;
+
+        button{
+          position: absolute;
+          top:15px;
+          right: 17px;
+          width: 50%;
+          padding-left: 47%;
+        }
+      }
+
+      .topRight{
+        flex-direction: column;
+        align-items: baseline;
+      }
+    }
+
+    .subscribe{
+      flex-direction: column;
+
+      .sale{
+        padding-bottom: 12px;
+      }
+
+      .subscription{
+        input{
+          margin-bottom: 10px;
+          width: auto;
+          min-width: auto;
+        }
+      }
+    }
+
+    .paymentPartners{
+      display: inline-flex;
+      flex-wrap: wrap;
+    }
+    .bottom{
+      span{
+        flex-direction: column;
+
+        p{
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,246 @@
+@import "../../../styleGuide.module";
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 850px;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+    align-items: baseline;
+
+    h2 {
+    @extend %h2-28px-medium;
+      padding-right: 8px;
+    }
+    .number{
+      padding-left: 8px;
+      color: $second-middle-grey;
+    }
+  }
+
+  .card{
+    border: 1px solid #C6C8CD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 100%;
+    padding: 32px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+
+    .left{
+      padding-right: 30px;
+      width: 40%;
+
+      .percent{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 20px;
+
+        p{
+          @extend %h3-24px-medium;
+        }
+
+        .grey{
+          color: $second-middle-grey;
+        }
+      }
+    }
+
+    .right{
+      display: flex;
+      flex-direction: column;
+      width: inherit;
+
+      .line{
+        display: flex;
+        flex-direction: row;
+
+        .side {
+          float: left;
+          width: 15%;
+          margin-top: 10px;
+          @extend %text-12px-medium;
+          color: $second-middle-grey;
+        }
+
+        .middle {
+          float: left;
+          width: 70%;
+          margin-top: 10px;
+          align-self: center;
+        }
+
+        .sideRight {
+          text-align: right;
+          float: left;
+          width: 15%;
+          margin-top: 10px;
+          @extend %text-12px-medium;
+        }
+
+        .barContainer {
+          width: 100%;
+          background-color: $second-middle-grey;
+          text-align: center;
+          color: white;
+        }
+
+        .bar{
+          height: 4px;
+          background-color: $main-blue;
+        }
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      @media (max-width: 400px) {
+        .side, .middle {
+          width: 100%;
+        }
+        .sideRight {
+          display: none;
+        }
+      }
+    }
+
+    .giveFeedback{
+      padding: 12px 32px;
+      background-color: $main-blue;
+      color:$main-white;
+      border-radius: 4px;
+      @extend %text-16px-medium;
+    }
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+    border-bottom: 1px solid $light-grey;
+
+    button{
+      margin-right: 8px;
+      border-radius: 4px;
+      background-color: $light-blue;
+      color: $main-blue;
+      position: relative;
+      padding: 14px 13px 10px 45px;
+
+      span{
+        position: absolute;
+        top: 13px;
+        left: 16px;
+      }
+
+      p{
+        @extend %text-14px-medium;
+      }
+    }
+
+    :active{
+      background-color: $main-blue;
+      color: $main-white;
+    }
+
+    :focus{
+      outline: $second-middle-grey;
+    }
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  .item{
+    width: 100%;
+    padding-top: 32px;
+
+    .top{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @extend %text-12px-regular;
+      color: $second-middle-grey;
+
+      .left{
+
+        .rating{
+          height: max-content;
+          margin-bottom: 10px;
+
+          span{
+            padding-top: 5px;
+          }
+        }
+
+        p{
+        padding-right: 25px;
+        }
+
+        span{
+          display: flex;
+          flex-direction: row;
+          padding-bottom: 15px;
+
+          :first-child:after{
+            position: absolute;
+            content: '';
+            background-color: $second-middle-grey;
+            width: 2px;
+            height: 2px;
+            border-radius: 2px;
+            top: 5px;
+            right: 13px;
+          }
+
+          p{
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .body{
+
+
+      .paragraph{
+        padding-bottom: 24px;
+
+        .tit{
+          padding-bottom: 8px;
+          @extend %text-12px-medium;
+          color: $second-middle-grey;
+        }
+
+        .description{
+          @extend %text-16px-regular;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card{
+      flex-direction: column;
+
+      .left{
+        width: 100%;
+        padding-right: 0;
+
+        button{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

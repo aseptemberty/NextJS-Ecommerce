@@ -1,0 +1,41 @@
+@import "../../styleGuide.module";
+
+.body{
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @extend %text-16px-medium;
+  border-radius: 8px;
+  background-color: $second-yellow;
+  color: $main-black;
+
+  p{
+    padding-bottom: 12px;
+  }
+
+  .logo{
+    padding-bottom: 32px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1e/Yandex-market.svg");
+    height: 20px;
+    width: 78%;
+    margin-bottom: 32px;
+  }
+
+  .rating{
+    @extend %text-14px-medium;
+  }
+
+  button{
+    border-radius: 4px;
+    background-color: $dark-grey;
+    color: $main-white;
+    margin: 32px 0 16px;
+    padding: 12px 32px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+}

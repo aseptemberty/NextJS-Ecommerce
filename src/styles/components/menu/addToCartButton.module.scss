@@ -1,0 +1,70 @@
+@import "../../styleGuide.module";
+
+.buyButton{
+  background: $main-blue;
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  color: $main-white;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .buyButtonIcon{
+    width: auto;
+    padding: 0 3px 0 10px;
+  }
+  .buyButtonIcon+.buyButtonTitle{
+    padding-left: 12px;
+  }
+}
+.buyButtonBig {
+  width: 210px;
+  @extend .buyButton
+}
+
+.buyButton:focus{
+  outline: none;
+}
+
+.buyButtonLight{
+  background: $main-white;
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  color: $main-black;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .buyButtonIcon{
+    width: auto;
+    padding: 2px 3px 0 12px;
+  }
+  .buyButtonIcon+.buyButtonTitle{
+    padding-left: 12px;
+  }
+}
+
+.buyButtonDark{
+  border: 1px solid $main-white;
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  color: $main-white;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .buyButtonIcon{
+    width: auto;
+    padding: 2px 3px 0 12px;
+  }
+  .buyButtonIcon+.buyButtonTitle{
+    padding-left: 12px;
+  }
+}

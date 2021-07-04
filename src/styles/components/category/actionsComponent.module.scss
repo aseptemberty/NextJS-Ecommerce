@@ -1,0 +1,89 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  padding-top: 34px;
+  border-top: 1px solid $light-grey;
+
+  .half{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .item{
+      display: flex;
+      flex-direction: row;
+      margin-right: 8px;
+      width: 33%;
+
+      p{
+        @extend %text-12px-regular;
+        text-align: start;
+        align-self: center;
+        width: 60%;
+      }
+
+      span{
+        background-color: $light-blue;
+        color:$main-blue;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-right: 8px;
+        position: relative;
+
+        p{
+          position: absolute;
+          top: 35%;
+          left: 39%;
+        }
+      }
+    }
+
+    .item:focus{
+      outline: none;
+
+      span{
+        background-color: $main-blue;
+        color:$main-white;
+      }
+
+      p{
+        color: $main-blue;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    .half{
+      margin-bottom: 8px;
+    }
+  }
+  @media (max-width: 740px){
+    margin-top: 32px;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .half{
+      flex-direction: column;
+      .item{
+        width: 100%;
+        padding-bottom: 24px;
+      }
+    }
+  }
+  @media (max-width: 460px){
+    flex-direction: column;
+    .half{
+      margin-bottom: 0;
+    }
+  }
+}

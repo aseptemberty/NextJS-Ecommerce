@@ -1,0 +1,219 @@
+@import "../../../../../styleGuide.module";
+
+.body{
+  position: fixed;
+  right: 10%;
+  top: 20%;
+  width: 80vw;
+  box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.12);
+  border-radius: 8px;
+  background-color: $main-white;
+  z-index: 5;
+  align-items: center;
+  padding: 60px 52px;
+
+  h3{
+    @extend %h3-24px-medium;
+    padding-bottom: 16px;
+  }
+
+  p{
+
+    @extend %text-14px-regular;
+  }
+
+  .productName{
+    color: $main-blue;
+    padding-bottom: 32px;
+  }
+
+  .rating{
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px;
+
+    .stars{
+      position: absolute;
+      right: 0;
+      top: -8px;
+    }
+  }
+
+  form{
+
+    .row{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .textInput{
+        width: 50%;
+
+        &:first-child{
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .textInput, .textarea{
+      position: relative;
+      padding-bottom: 24px;
+
+      &:focus-within{
+        label{
+          @extend %text-10px-regular;
+          top:10px;
+        }
+      }
+
+      input,textarea{
+        background-color: $light-blue;
+        border-radius: 4px;
+        padding: 16px 12px;
+        width: 100%;
+
+        &:focus{
+          outline: none;
+          background-color: $main-white;
+          border: 1px solid rgba(198, 200, 205, 0.4);
+          padding: 15px 11px;
+        }
+      }
+
+      label{
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        color: $second-middle-grey;
+        @extend %text-14px-regular;
+      }
+
+      p{
+        position: absolute;
+        @extend %text-10px-regular;
+        color: $second-middle-grey;
+        bottom:4px;
+        left: 2px;
+      }
+    }
+
+    .recommendations{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      @extend %text-14px-regular;
+      padding-bottom: 24px;
+      align-items: center;
+
+      p{
+        margin-right: 40px;
+      }
+
+      .buttons{
+        button{
+          background-color: $light-blue;
+          color: $main-blue;
+          padding: 12px 20px;
+          border-radius: 4px;
+
+          &:first-child{
+            margin-right: 8px;
+          }
+
+          &:focus{
+            outline: none;
+          }
+
+          &:active{
+            background-color: $main-blue;
+            color: $main-white;
+          }
+        }
+      }
+    }
+  }
+
+  .submit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    button{
+      background-color: $light-blue;
+      color: $opacity3-main-blue;
+      padding: 12px 32px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+
+      &:active{
+        background-color: $main-blue;
+        color: $main-white;
+      }
+    }
+
+    p{
+      color: $second-middle-grey;
+      @extend %text-10px-regular;
+      text-align: center;
+    }
+  }
+
+  .close{
+    background-color: $main-blue;
+    color: $main-white;
+    padding: 12px 32px;
+    border-radius: 4px;
+    @extend %text-16px-medium;
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    z-index: 1220;
+    right: 0;
+    top:202vw;
+    position: absolute;
+
+    form{
+
+      .row{
+        flex-direction: column;
+
+        .textInput{
+          width: 100%;
+
+          &:first-child{
+            margin-right: 0;
+          }
+        }
+      }
+
+      .recommendations{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+
+        p{
+          margin-bottom: 12px;
+        }
+
+        .buttons{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+
+          button{
+            width: 50%;
+
+          }
+        }
+      }
+    }
+  }
+}

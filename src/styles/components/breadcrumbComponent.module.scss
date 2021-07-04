@@ -1,0 +1,33 @@
+@import "../styleGuide.module";
+
+.list{
+  display: flex;
+  flex-direction: row;
+
+  .item{
+    position: relative;
+    padding-top: 32px;
+    padding-right: 12px;
+    padding-bottom: 9px;
+
+  }
+  .item  a{
+    color: $second-middle-grey;
+    @extend %text-12px-regular;
+  }
+
+  a:after{
+    content: "";
+    width: 2px;
+    height: 2px;
+    background-color: $second-middle-grey;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 5px;
+  }
+  :last-child a:after{
+    display: none;
+  }
+}

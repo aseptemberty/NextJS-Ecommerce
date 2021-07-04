@@ -1,0 +1,45 @@
+@import "../../styleGuide.module";
+
+.slider{
+  &:first-child{
+    div{
+    }
+  }
+
+}
+
+.slider div div div {
+  display: flex;
+  flex-direction: row;
+}
+.slider ul{
+  display: flex!important;
+  flex-direction: row;
+  position: absolute;
+  top: -20px;
+  right: 15px;
+  li{
+    button:focus{
+      outline: none;
+    }
+  }
+
+}
+
+.slider{
+  position: relative}
+
+.slider{
+  margin: 0 -1.5em;
+  div{
+    width: 100%;
+    overflow: hidden;
+    line-height: initial;
+    div{
+      overflow: visible;
+      div:focus{
+        outline: none;
+      }
+    }
+  }
+}

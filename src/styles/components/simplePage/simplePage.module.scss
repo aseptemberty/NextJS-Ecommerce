@@ -1,0 +1,163 @@
+@import "../../styleGuide.module";
+
+.subtitle{
+  @extend %text-14px-regular;
+  padding-bottom: 40px;
+}
+
+.body{
+  padding-bottom: 20px;
+
+  .imageBox{
+    background-color: $light-blue;
+    height: 483px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+
+  .item{
+    padding-bottom: 40px;
+    max-width: 832px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .circleList{
+      padding-bottom: 28px;
+
+      li{
+        position: relative;
+        @extend %text-16px-regular;
+        padding-left: 12px;
+        padding-bottom: 5px;
+
+        &::before{
+          position: absolute;
+          content: '';
+          top: 8px;
+          left: 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $main-blue;
+        }
+      }
+    }
+
+    p{
+      @extend %text-16px-regular;
+    }
+
+    h2{
+      @extend %h2-28px-medium;
+      padding-bottom: 20px;
+    }
+
+    h4{
+      @extend %h4-20px-medium;
+      padding-bottom: 16px;
+    }
+
+    .grey{
+      color: $second-middle-grey;
+    }
+  }
+
+  .numberList{
+    list-style: decimal;
+
+    &, ol {
+      counter-reset: item
+    }
+
+    li{
+      display: block ;
+      position: relative;
+    }
+
+    li:before {
+      content: counters(item, ".") " ";
+      counter-increment: item ;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    li{
+      list-style: decimal;
+
+      ol{
+        li{
+          list-style: decimal;
+          color: $main-blue;
+
+          p{
+            @extend %text-16px-regular;
+            padding-bottom: 10px;
+            color: $main-black;
+            padding-left: 60px;
+          }
+
+          ul{
+            counter-increment: none;
+            li{
+              position: relative;
+              @extend %text-16px-regular;
+              padding-bottom: 5px;
+              margin-left: 60px;
+              counter-increment: none;
+
+              p{
+                padding-left: 14px;
+              }
+
+              &::before{
+                position: absolute;
+                content: '';
+                top: 8px;
+                left: 0;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $main-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    h4{
+      @extend %h4-20px-medium;
+      padding-left: 60px;
+    }
+  }
+
+  p{
+    @extend %text-16px-regular;
+  }
+
+  @media (max-width: $tablet) {
+    .item{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding-bottom: 0;
+
+    .imageBox{
+      margin-bottom: 24px;
+    }
+
+    .item{
+      padding-bottom: 32px;
+
+      h2{
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .left{
+    padding-right: 20px;
+    width: 60vw;
+  }
+
+  .right {
+    overflow: visible;
+    display: flex;
+
+    .sidebar{
+      position: sticky;
+      top: 154px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 48px;
+
+
+  h1{
+    @extend %h1-32px-medium;
+  }
+
+  .linkBack{
+    @extend %text-14px-regular;
+    color: $main-blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p{
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      margin-left: 8px;
+
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .body{
+    flex-direction: column;
+  }
+  .right{
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .title{
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+
+    h1{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .linkBack{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .image{
+    width: 20vw;
+
+    img{
+      width: 90%;
+    }
+  }
+}

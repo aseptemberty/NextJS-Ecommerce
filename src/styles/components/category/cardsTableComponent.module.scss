@@ -1,0 +1,10 @@
+.body{
+  width: 100%;
+  padding-top: 18px;
+  margin-left: 0;
+  margin-bottom: 60px;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+  }
+}

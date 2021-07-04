@@ -1,0 +1,20 @@
+@import "../../styleGuide.module";
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  padding: 26px 0;
+  overflow: auto;
+
+  .tab{
+    padding-right: 40px;
+
+    a p{
+      color: $main-black;
+      @extend %text-14px-medium;
+    }
+  }
+}
+.tabs::-webkit-scrollbar{
+  display: none;
+}

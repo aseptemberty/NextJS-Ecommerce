@@ -1,0 +1,66 @@
+@import "../../styleGuide.module";
+
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 350px;
+  width: 100%;
+  text-align: center;
+
+  h3{
+    @extend %h3-24px-medium;
+    margin-bottom: 20px;
+  }
+
+  .text{
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+      color: $main-blue;
+      @extend %text-16px-regular;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: rgba(57, 150, 210, 0.2);
+      padding-left: 3px;
+    }
+  }
+
+  p{
+    @extend %text-16px-regular
+  }
+
+  .last{
+    font-weight: bold;
+  }
+
+
+  button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 212px;
+    height: 48px;
+    background: $main-blue;
+    border-radius: 4px;
+    color: $main-white;
+    @extend %text-16px-medium;
+    margin-top: 40px;
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  @media (max-width: 576px) {
+    button{
+      width: 100%;
+    }
+  }
+}

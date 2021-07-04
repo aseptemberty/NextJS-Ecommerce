@@ -1,0 +1,172 @@
+$main-white: white;
+$main-blue: #336799;
+$main-green: #3CA532;
+$main-black: #2D2D2D;
+$main-red:#E60514;
+
+$light-blue:#F3F6FA;
+$dark-grey:#2F3442;
+$light-green:#E2F5D6;
+$light-grey: rgba(198, 200, 205, 0.2);
+$light-orange:#FFA94B;
+
+$second-yellow: #FFD500;
+$second-green: #A1CE68;
+$second-gold: #E59925;
+$second-orange:#F07D00;
+$second-light-blue: #F3F6FA;
+$second-light-grey: #F4F4F4;
+$second-middle-grey: #C6C8CD;
+
+$opacity2-main-blue: rgba(57,150,210, 0.2);
+$opacity3-main-blue: rgba(57,150,210, 0.3);
+
+
+/*300*/
+@font-face {
+  font-family: "Rubik Light";
+  src: url("../../public/fonts/Rubik-Light.ttf");
+}
+/*400*/
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("../../public/fonts/Rubik-Regular.ttf");
+}
+/*500*/
+@font-face {
+  font-family: "Rubik";
+  src: url("../../public/fonts/Rubik-Medium.ttf");
+}
+/*600*/
+@font-face {
+  font-family: "Rubik Semi-bold";
+  src: url("../../public/fonts/Rubik-SemiBold.ttf");
+}
+/*700*/
+@font-face {
+  font-family: "Rubik Bold";
+  src: url("../../public/fonts/Rubik-Bold.ttf");
+}
+
+$mobile: 767px;
+$tablet: 1200px;
+
+$text-small: 12px;
+$text-medium: 14px;
+$text-big: 16px;
+
+$title-small: 20px;
+$title-medium: 24px;
+$title-big: 28px;
+$title-main: 32px;
+
+%title-sm{
+  font-size: 14px;
+  line-height: 20px;
+}
+%title-md{
+  font-size: 20px;
+  line-height: 24px;
+}
+
+%h1-32px-medium{
+  font-family: "Rubik Semi-bold", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+%h2-28px-medium{
+  font-family: "Rubik Semi-bold", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+%h3-24px-medium{
+  font-family: "Rubik",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+%h4-14px-medium{
+  font-family: "Rubik",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+%h4-20px-medium{
+  font-family: "Rubik Semi-bold", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+%text-16px-medium{
+  font-family: "Rubik Semi-bold", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%text-16px-regular{
+  font-family: "Rubik Regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%text-14px-regular{
+  font-family: "Rubik Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+%text-14px-medium{
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+
+%text-12px-regular{
+  font-family: "Rubik Regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+%text-12px-medium{
+  font-family: "Rubik",sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+%text-10px-medium{
+  font-family: "Rubik", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+%text-10px-regular{
+  font-family: "Rubik Regular", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}

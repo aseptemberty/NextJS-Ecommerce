@@ -1,0 +1,160 @@
+@import "../../styleGuide.module";
+
+.cardBody{
+  padding: 20px;
+
+
+
+  .cardInner{
+    padding: 20px;
+    height: 420px;
+    box-shadow: 0 2px 12px rgba(13, 77, 163, 0.06), 0 2px 16px rgba(45, 45, 45, 0.08);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: inherit;
+
+    &:hover{
+      box-shadow: 0 0 20px rgb(0 0 0 / 17%);
+    }
+
+    .cardTop{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      position: relative;
+
+      .cardIcons{
+        color: $second-middle-grey;
+        width: 74px;
+        position: absolute;
+        right: -5px;
+        display: flex;
+        font-size: 25px;
+        justify-content: space-between;
+      }
+      .action{
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        padding: 5px 8px;
+        background: #FFD500;
+        border-radius: 3px;
+        @extend %h4-14px-medium
+      }
+    }
+
+    .cardCenter{
+      display: flex;
+      flex-direction: column;
+      height: 144px;
+      align-items: center;
+
+      .title {
+        @extend %title-sm;
+        padding:23px 0;
+      }
+
+      .imageBox{
+        width: 144px;
+        height: 121px;
+      }
+    }
+
+    .cardBottom{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 54px;
+
+      div{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .oldPrice{
+        color: $second-middle-grey;
+        font-size: $text-medium;
+        display: inline-block;
+
+        p{
+          text-decoration: line-through;
+        }
+      }
+      .newPrice{
+        @extend %h4-20px-medium
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid rgba(198,	200, 205, 0.5);
+
+    .cardInner{
+      box-shadow: none;
+    }
+  @media (max-width: 380px) {
+    .cardInner{
+      padding: 20px 10px;
+      .cardTop {
+        .cardIcons {
+          width: 60px;
+        }
+      }
+    }
+  }
+    //.cardInner{
+    //  padding: 20px;
+    //  height: 273px;
+    //  flex-direction: column;
+    //  justify-content: space-between;
+    //
+    //  .cardTop{
+    //    flex-direction: row;
+    //    justify-content: space-between;
+    //    padding-bottom: 25px;
+    //    position: relative;
+    //
+    //    .cardIcons{
+    //      color: $second-middle-grey;
+    //      width: 74px;
+    //      position: absolute;
+    //      right: -5px;
+    //      display: flex;
+    //      font-size: 25px;
+    //      justify-content: space-between;
+    //    }
+    //    .action{
+    //      position: absolute;
+    //      width: 60px;
+    //      height: 30px;
+    //      padding: 5px 8px;
+    //      background: #FFD500;
+    //      border-radius: 3px;
+    //    }
+    //  }
+    //
+    //  .cardCenter{
+    //    display: flex;
+    //    flex-direction: row;
+    //
+    //    .title {
+    //      padding:30px 0;
+    //    }
+    //
+    //    .imageBox{
+    //      height: 121px;
+    //      width: 144px;
+    //    }
+    //  }
+    //}
+  }
+}
+
+
+

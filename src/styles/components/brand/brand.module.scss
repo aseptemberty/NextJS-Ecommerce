@@ -1,0 +1,65 @@
+@import "../../styleGuide.module";
+
+.body{
+  .title{
+    @extend %h1-32px-medium;
+    padding-bottom: 28px;
+  }
+
+  .slider{
+    margin-bottom: 60px;
+
+    .title{
+      h2{
+        @extend %h2-28px-medium;
+      }
+    }
+  }
+
+  .container{
+    max-width: 832px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .description{
+      padding-bottom: 60px;
+
+      h2{
+        @extend %h2-28px-medium;
+        padding-bottom: 20px;
+      }
+
+      p{
+        @extend %text-16px-regular;
+      }
+    }
+
+    .banner{
+      height: 470px;
+      background-image: url("../../../../public/images/sliced-grapefruit-3029575 1.png");
+      border-radius: 8px;
+      margin-bottom: 60px;
+      position: relative;
+      padding: 80px;
+
+      .action{
+        background-color: $second-yellow;
+        border-radius: 3px;
+        @extend %text-14px-medium;
+        padding: 5px 8px;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+      }
+
+      .title{
+        @extend %h1-32px-medium;
+        color: $main-white;
+      }
+
+      p{
+        color: $main-white;
+      }
+    }
+  }
+}

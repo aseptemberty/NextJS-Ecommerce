@@ -1,0 +1,157 @@
+@import "../../styleGuide.module";
+
+#radiobutton{
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+
+    input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    z-index: 1020;
+    }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: #eee;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: $main-blue;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+    left: 9px;
+    top: 3px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+#checkbox {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    z-index: 1020;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #eee;
+
+    &:focus, &:hover{
+      outline: none;
+
+      &:after{
+        display: block;
+        left: 9px;
+        top: 3px;
+        width: 8px;
+        height: 15px;
+        border: solid $main-blue;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  input:checked ~ .checkmark {
+    background-color: $main-blue;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+    left: 9px;
+    top: 3px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+#textInput{
+  position: relative;
+
+  input{
+    height: 44px;
+    background-color: $light-blue;
+    border: 1px solid rgba(198, 200, 205, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+
+    &:focus{
+      outline: none;
+    }
+
+    &::placeholder{
+      color: $second-middle-grey;
+      @extend %text-14px-regular;
+    }
+  }
+
+  label {
+    color: $second-middle-grey;
+    @extend %text-14px-regular;
+  }
+
+  .center{
+    position: absolute;
+    top: 14px;
+    left: 12px;
+  }
+
+  .top{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+  }
+}
+

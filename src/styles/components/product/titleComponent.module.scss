@@ -1,0 +1,15 @@
+@import "../../styleGuide.module";
+
+.title{
+  padding-bottom: 28px;
+  @extend  %h1-32px-medium;
+
+  @media (max-width: 1080px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

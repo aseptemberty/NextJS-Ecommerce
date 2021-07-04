@@ -1,0 +1,125 @@
+@import '../../styleGuide.module';
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  height: 450px;
+  flex-direction: row;
+  margin: 20px 0;
+
+  .bigBanner{
+    width: 650px;
+    margin-right: 20px;
+    height: 450px;
+  }
+
+  .mediumBanners{
+    width: calc(100vw - 1000px);
+    margin-right: 20px;
+  }
+
+  .bottom{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.banner{
+  margin-bottom: 60px;
+}
+
+.sliders{
+  margin-bottom: 60px;
+
+  h2{
+    @extend %h2-28px-medium;
+    padding-bottom: 24px;
+
+    :focus{
+      color: $main-blue;
+    }
+  }
+  .new{
+    .title{
+      padding-left: 15px;
+
+      h2{
+        padding-bottom: 0;
+      }
+    }
+  }
+  .news{
+    .title{
+      display: flex;
+      flex-direction: row;
+      padding-left: 15px;
+
+      h2{
+        padding-right: 44px;
+      }
+
+      p{
+        @extend %text-14px-medium;
+        padding-top:10px;
+      }
+    }
+  }
+}
+
+
+.centerBanners{
+  display: flex;
+  flex-direction: row;
+  height: 470px;
+  margin-bottom: 60px;
+
+  .biggerBanner{
+    width: 65%;
+    margin-right: 20px;
+
+    p:first-child{
+      left: 9% !important;
+    }
+  }
+
+  .smallerBanner{
+    width: 35%;
+  }
+}
+
+.brands{
+  h2{
+    @extend %h2-28px-medium;
+    padding-bottom: 24px;
+  }
+  margin-bottom: 80px;
+}
+
+
+
+@media(max-width: 1480px){
+
+}
+
+@media (max-width: $tablet) {
+  .top{
+    flex-direction: column;
+    height: auto;
+
+    .bottom{
+      .mediumBanners{
+        width: calc(100vw - 277px);
+      }
+    }
+  }
+
+}
+
+@media (max-width: $mobile){
+  .top{
+    .bottom{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.slider{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin: 0 -0.5em;
+  width: 100%;
+
+  div{
+    width: 100%;
+    overflow: hidden;
+    line-height: initial;
+    div{
+      overflow: visible;
+      display: flex;
+      div:focus{
+        outline: none;
+      }
+    }
+  }
+  ul{
+    display: flex!important;
+    flex-direction: row;
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    li{
+      button:focus{
+        outline: none;
+      }
+    }
+  }
+  @media (min-width: 1800px){
+    width: 80vw;
+  }
+  @media (max-width: 1279px) {
+    width: 96vw;
+  }
+}
+
+
