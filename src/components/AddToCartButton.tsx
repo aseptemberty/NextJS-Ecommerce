@@ -6,7 +6,7 @@ import {addProductToCart} from "../utils/redux/actions/cartActions"
 import { currencyFormat } from "../utils/helpers"
 
 
-export function AddToCartButton({ type, product, cart, addProductToCart }) {
+function AddToCartButton({ type, product, cart, addProductToCart}) {
   let classname = styles.buyButton
   let title = ''
   switch (type) {

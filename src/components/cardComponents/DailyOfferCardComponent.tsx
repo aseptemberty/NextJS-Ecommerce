@@ -1,10 +1,11 @@
 import styles from '../../styles/components/card/dailyOfferCardComponent.module.scss'
-import { AddToCartButton } from '../AddToCartButton'
+import AddToCartButton from '../AddToCartButton'
 import React from 'react'
 
 
 function DailyOfferCardComponent({product}){
-  return(
+  // @ts-ignore
+    return(
     <div className={styles.card}>
       <div className={styles.top}>
         <h4>Товар дня</h4>
